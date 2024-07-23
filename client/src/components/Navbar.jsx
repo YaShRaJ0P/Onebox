@@ -7,11 +7,19 @@ import List from "../Assets/List.svg";
 import Search from "../Assets/Search.svg";
 import Message from "../Assets/Message.svg";
 import Inbox from "../Assets/Inbox.svg";
-export const Navbar = () => {
+export const Navbar = ({ inboxModal, setInboxModal }) => {
   return (
-    <nav className="bg-[#101113] text-white p-4 w-max h-screen flex flex-col border-r border-[#343A40]">
+    <nav className="bg-[#101113] text-white p-4 w-max h-screen flex flex-col border-r border-[#343A40] ">
       <img src={Logo} alt="Logo" className="size-6 mb-12" />
       <ul className="flex flex-col h-full gap-y-6 flex-grow">
+        <button
+          onClick={() => {
+            setInboxModal(!inboxModal);
+          }}
+          className="lg:hidden"
+        >
+          ≡
+        </button>
         <li>
           <img src={Home} alt="Home" className="size-6" />
         </li>

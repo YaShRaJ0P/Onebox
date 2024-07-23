@@ -6,7 +6,7 @@ const EmailReply = ({ setReplyModal }) => {
   const [subject, setsubject] = useState("");
   const [message, setmessage] = useState("");
   return (
-    <div className="bg-[#141517] text-white rounded-lg z-50 absolute bottom-5 w-[90%] left-7 ">
+    <div className="bg-[#141517] text-white rounded-lg z-50 absolute bottom-5 w-[96.5%] max-md:w-[90%] left-6">
       <div className="flex flex-row justify-between pl-2 pr-3 bg-[#23272C] py-1 items-center rounded-t-lg">
         <span className="text-[#BAB9BD]">Reply</span>
         <button onClick={() => setReplyModal(false)} className="text-2xl">

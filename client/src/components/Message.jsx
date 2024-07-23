@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Reply from "../Assets/Reply.svg";
 import EmailReply from "./EmailReply";
 
-export const Message = () => {
+export const Message = ({ inboxModal }) => {
   const [replyModal, setReplyModal] = useState(false);
 
   const handleReplyClick = () => {
@@ -10,9 +10,13 @@ export const Message = () => {
   };
 
   return (
-    <div className="w-full text-white relative">
+    <div
+      className={`w-full text-white relative max-md:text-sm border-r-2 border-[#343A40] ${
+        inboxModal && "max-lg:opacity-65"
+      }`}
+    >
       {/* Header Section */}
-      <div className="flex flex-row justify-between items-center h-24 border-b border-[#33383F] p-4">
+      <div className="flex flex-row justify-between items-center border-b border-[#33383F] p-4 max-md:flex-col max-md:gap-2">
         <div className="flex flex-col">
           <div className="text-white font-bold">Orlando</div>
           <div className="text-gray-500 text-sm">orlando@gmail.com</div>
