@@ -6,7 +6,7 @@ import Inbox from "../components/Inbox";
 import { Message } from "../components/Message";
 export const Home = () => {
   return (
-    <div>
+    <div className="relative">
       <Header />
       <div className="flex bg-black">
         <Navbar />
